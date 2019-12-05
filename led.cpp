@@ -55,11 +55,11 @@ char *value = getenv("REMOTE_ADDR");    // The remote IP address
    cout << "</div></form>" << endl;
  
    // process the form data to change the LED state
+   int number=stoi(blinkNumber);
    if (cmd=="on") writeGPIO("value", "1");              // turn on
    else if (cmd=="off") writeGPIO("value", "0");        // turn off
-   else if (cmd=="blink") {                             // blink LED
-      int num=stoi(blinkNumber); 
-      for (int i=0;i<num;i++) {    
+   else if (cmd=="blink") {                             // blink LED 
+      for (int i=0;i<number;i++) {    
          writeGPIO("value", "1");
          sleep(1);
          writeGPIO("value", "0");
