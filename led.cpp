@@ -41,8 +41,8 @@ char *value = getenv("REMOTE_ADDR");    // The remote IP address
  
    // generate the form but use states that are set in the submitted form
    cout << HTTPHTMLHeader() << endl;       // Generate the HTML form
-   cout << html() << head() << title("LED Example") << head() << endl;
-   cout << body() << h1("Exploring BB POST LED Example") << endl;;
+   cout << html() << head() << title("Mellett Final Project") << head() << endl;
+   cout << body() << h1("CPE 422 Final Project") << endl;;
    cout << "<form action=\"/cgi-bin/led.cgi\" method=\"POST\">\n";
    cout << "<div>Set LED: <input type=\"radio\" name=\"cmd\" value=\"on\""
         << ( cmd=="on" ? "checked":"") << "/> On ";
